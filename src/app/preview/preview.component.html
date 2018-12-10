@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 display-4 text-light  bg-dark text-center">
+
+      Purchased Items
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary mt-3 mb-3"  (click)="home()">Home</button>
+
+  <table class="table table-hover">
+    <tr>
+      <th>Name of the product</th>
+      <th>Price of 1 item</th>
+      <th>Total number of items</th>
+      
+    </tr>
+    <tr *ngFor="let i of totalData">
+      <td>{{i.name}}</td>
+      <td>{{i.cost}}</td>
+      <td>{{i.count}} </td>
+      
+
+      <!-- <button type="button" class="btn btn-danger mr-2" (click)="delete()">Delete</button>
+      <button type="button" class="btn btn-success mr-2" (click)="edit()">Edit</button> -->
+    </tr>
+       
+  </table>
+
+
+  
+  <button type="button" class="btn btn-secondary" (click)="genrateBill()">GenrateBill</button>
+
+  <table class="table table-hover">
+    <tr>
+    <th>Name</th>
+    <th>Amount</th>
+  </tr>
+  <tr *ngFor="let i of totalBill">
+    <td>{{i.name}}</td>
+    <td>{{i.amount}} </td>
+  </tr>
+
+  </table>
+  <h4 class="text-dark ml mr- mt-4 ">TotalPrice</h4>:{{totalMilkCost+totalBreadCost+totalJamCost}}
+</div>

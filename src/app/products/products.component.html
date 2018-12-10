@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <img src="https://i.pinimg.com/236x/e8/ed/9e/e8ed9e2287235a051ca5fc2b2ade6c41--general-store-logo-google.jpg" alt=""
+        height="100px" width="250px">
+    </div>
+    <div class="col-9 display-4 text-light bg-dark">
+      <marquee behavior="scroll" direction="left">
+        <b>
+          Woods General Store
+        </b>
+      </marquee>
+    </div>
+  </div>
+  <div class="display-5 bg-dark text-white mt-3 mb-3">Select Items</div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card-deck">
+
+        <div class="card" style="">
+          <img class="card-img-top" src="https://4.imimg.com/data4/PY/GW/MY-7751086/fresh-packet-milk-500x500.jpg"
+            height="300px" width="200px" alt="milk  ">
+          <div class="card-body">
+            <h5 class="card-title">Milk Packets</h5>
+            <p class="card-text">
+              1 litter
+              <br/>
+              count:{{count}}
+
+            </p>
+            <button type="button" class="btn btn-success" (click)="milk(i)">Buy</button>
+          </div>
+        </div>
+
+        <div class="card" style="">
+          <img class="card-img-top" src="https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_5acf093c-6248-465a-a229-f3597040624a.JPG"
+            height="300px" width="200px" alt="bread">
+          <div class="card-body">
+            <h5 class="card-title">Bread Packets</h5>
+            <p class="card-text">
+              20 pieces
+              <br/>
+              count:{{breadCount}};
+
+            </p>
+            <button type="button" class="btn btn-success"(click)="bread()">Buy</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/41wBDla%2BzML.jpg" height="300px"
+            width="200px" alt=" Kisan Jam ">
+          <div class="card-body">
+            <h5 class="card-title">Kissan Jam</h5>
+            <p class="card-text">
+              1 packet
+              <br/>
+              count:{{jamCount}}
+
+            </p>
+            <button type="button" class="btn btn-success" (click)="jam()">Buy</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <button type="button" (click)="preview()" class="btn btn-warning mt-3 text-dark">Preview</button>
+
+</div>
